@@ -1,0 +1,233 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+  <head>
+  <meta charset="utf-8">
+  <title>Immediately-invoked function expression</title>
+   <meta name="description" content="IIFE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link href='https://fonts.googleapis.com/css?family=Dosis:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="/assets/scripts/vendor/modernizr.js"></script>
+</head>
+
+
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main>
+
+    <header class="header--little">
+        
+  <div id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav class="menu">
+    <div class="menu__container">
+      <a href="http://facebook.com/jeffersondanielss" class="menu__item" target="_blank">facebook /jeffersondanielss</a>
+      <a href="http://instagram.com/jeffersondanielss" class="menu__item" target="_blank">instagram /jeffersondanielss</a>
+      <a href="http://github.com/jeffersondanielss" class="menu__item" target="_blank">github /jeffersondanielss</a>
+      <a href="mailto:jeffersondanielss@gmail.com" class="menu__item" target="_blank">gmail /jeffersondanielss</a>
+      <a href="http://twitter.com/jeffersondss_" class="menu__item" target="_blank">twitter /jeffersondss_</a>
+      <a href="/contrate" class="menu__item">Employed me</a>
+      <a href="#blog" class="menu__item">Blog</a>
+    </div>
+  </nav>
+
+  <h1>
+    <a href="/" class="logo">Jefferson Daniel</a>
+  </h1>
+</header>
+
+<section class="post-container" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="post__date">
+    <time datetime="2015-12-20T20:00:28-02:00" itemprop="datePublished">
+      Dec 20, 2015
+    </time>
+  </div>
+    <h1 class="post__title" itemprop="name headline">Immediately-invoked function expression</h1>
+
+    <h1 id="iife">IIFE</h1>
+
+<p>O IIFE ou Immediately-invoked function expression, é umas das formas de se declarar uma função no javascript, para entender melhor <strong>como uma variável pode receber um valor de uma IIFE</strong> temos que entender antes alguns conceitos.
+O primeiro deles é como funciona a <strong>IIFE</strong>, que será a nossa função que retorna um valor, após isso temos que entender como funciona o <strong>Variable assignment</strong> que é a forma de atribuir uma função a nossa variável, e por fim, podemos juntar esses dois conceitos e criar nossa função auto executável que vai retornar um valor para nossa variável.</p>
+
+<h3 id="iffe-funo-auto-executvel">IFFE (função auto executável)</h3>
+
+<p>A função no javascript na sua sintax mais básica como: <strong>function functionName(){ /* code */ }</strong>, precisa obrigatoriamente ser chamada para que o bloco de código contida dentro dela seja executado. Uma alternativa para isso é o IIFE que ao mesmo tempo cria a função e já a executa na sequência.</p>
+
+<pre>
+  <code class="language-javascript">
+(function (){
+  /* code */
+})();
+  </code>
+</pre>
+
+<p>Algumas formas de criar uma IIFE:</p>
+
+<pre>
+  <code class="language-javascript">
+(function(){ /* code */ }());
+(function(){ /* code */ })();
+new function(){ /* code */ }();
+var fn = function(){ /* code */ }();
+  </code>
+</pre>
+
+<h3 id="variable-assignment">Variable Assignment</h3>
+
+<p>É a forma de criar uma função retornando um valor a uma variável, dessa forma a menos que essa função seja um IIFE ainda precisamos executar a função para que a variável receba o valor retornado dela.</p>
+
+<pre>
+  <code class="language-javascript">
+// Função anônima atribuída a uma variável
+var soma = function( num1, num2 ){
+  return num1 + num2;
+};
+
+var operacao = function adicao( num1, num2 ){
+  return num1 + num2;
+};
+
+soma( 5, 5 ); // 10
+adicao( 10, 10 ); // adicao is not defined
+  </code>
+</pre>
+
+<p>Legal, mas porque eu deveria aprender isso?</p>
+
+<h3 id="escopo">Escopo</h3>
+<p>As variáveis têm como escopo a função onde elas foram criadas, e como não queremos poluir o escopo global as variáveis criadas dentro da nossa IIFE só existem dentro dela.</p>
+
+<pre>
+  <code class="language-javascript">
+(function(){
+  var element = document.getElementById('element');
+  console.log( element );  // &lt; div id="element"&gt;...&lt;/ div&gt;
+})();
+
+console.log( element );  // element is not defined
+  </code>
+</pre>
+
+<h3 id="conflitos-de-libs">Conflitos de libs</h3>
+<p>Como muitas libs usam o <strong>$</strong> e é comum haver conflitos, apesar de ter outras alternativas como o <strong>noConflict()</strong> na IIFE você pode passar a referencia ao jQuery, ou qualquer outra lib como parâmetro:</p>
+
+<pre>
+  <code class="language-javascript">
+(function( $j ){
+  function facaAlgo() { /* code */ }
+  $j('.element').click( facaAlgo );
+})( jQuery );
+  </code>
+</pre>
+
+<h3 id="performance">Performance</h3>
+<p>Se você usa muitas vezes variáveis globais em seu código uma boa dica para performace é passar essas variáveis como parâmetro para que o interpretador não precise sair do escopo da sua função toda vez para ir buscar o valor daquela variável global.</p>
+
+<pre>
+  <code class="language-javascript">
+(function( doc ){
+    var btn = doc.getElementById('btn')
+      , element = doc.getElementById('element');
+
+    btn.addEventListener('click', function(){
+      element.style.display = 'none';
+    }, false);
+})( document );
+  </code>
+</pre>
+
+<p>Com a junção desses dois conceitos, o <strong>Variable Assignment</strong> e o <strong>IIFE</strong> podemos criar algo como:</p>
+
+<pre>
+  <code class="language-javascript">
+var operacao = (function(){
+  return {
+    soma: function( num1, num2 ) {
+      return num1 + num2;
+    },
+
+    subtracao: function( num1, num2 ) {
+      return num1 - num2;
+    }
+  }
+})();
+  </code>
+</pre>
+
+<p>Nesse exemplo acima temos uma função auto executável anônima atribuída a variável <strong>operacao</strong>, nessa IIFE retornamos um objeto com duas funções atribuídas as chaves do objeto. Como nós estamos retornando um objeto podemos acessar essas funções com <strong>operacao.soma( 5, 5 )</strong> por exemplo.
+É como se estivéssemos exportando essas funções que primeiramente estavam privadas dentro da IIFE para ser acessada através da variável <strong>operacao</strong>. Sendo assim podemos escolher o que queremos que permaneça privado e o que queremos tornar acessível.
+Para deixar mais organizado podemos criar as funções separadas e retornar o objeto apenas com o nome da função desejada.</p>
+
+<pre>
+  <code class="language-javascript">
+var operacao = (function(){
+
+  // função privada da IIFE
+  function soma( num1, num2 ) {
+    return num1 + num2;
+  }
+
+  // função privada da IIFE
+  function subtracao( num1, num2 ) {
+    return num1 - num2;
+  }
+
+  return {
+    soma, // retornando função soma a variável operacao
+  }
+
+})();
+
+operacao.soma(5,5) // 10
+operacao.subtracao(5,5) // operacao.subtracao is not a function
+  </code>
+</pre>
+
+<h3 id="quer-saber-mais-sobre-iife-">Quer saber mais sobre IIFE ?</h3>
+<ul>
+  <li><a href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/">IIFE - benalman </a></li>
+  <li><a href="http://imasters.com.br/front-end/javascript/sobre-funcoes-imediatas-javascript-iife/">Sobre funções imediatas JavaScript</a></li>
+  <li><a href="http://www.bryanbraun.com/2014/11/27/every-possible-way-to-define-a-javascript-function">Every Possible Way to Define a Javascript Function</a></li>
+</ul>
+
+
+
+    <div id="disqus_thread"></div>
+</section>
+
+
+      <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="/assets/scripts/vendor/scroll.min.js"></script>
+  <script src="/assets/scripts/vendor/tweetMax.min.js"></script>
+  <script src="/assets/scripts/vendor/anchor.js"></script>
+  <script src="/assets/scripts/vendor/prism.js"></script>
+
+  <script src="/assets/scripts/app.js"></script>
+  <script src="/assets/scripts/disqus.js"></script>
+  <script src="/assets/scripts/smoth-scroll.js"></script>
+  <script src="/assets/scripts/toggleClass.js"></script>
+  <script src="/assets/scripts/menu.js"></script>
+  <script id="dsq-count-scr" src="http://jeffersondaniel.disqus.com/count.js" async></script>
+
+  <footer class="footer">
+    <p class="footer-credits">Powered by <a href="http://jekyllrb.com" target="_blank">jekyll</a> <span class="heart">&#10084;</span></p>
+  </footer>
+</main>
+
+  </body>
+
+</html>

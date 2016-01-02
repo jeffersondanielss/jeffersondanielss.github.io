@@ -1,0 +1,57 @@
+.post-page {
+  background: #F5F5F5;
+}
+
+.post__date {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #FFFFFF;
+  background: $primary-color;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.post-container {
+  width: 60%;
+  position: relative;
+  margin: -50px auto 50px;
+  background: #FFFFFF;
+  padding: 50px;
+  box-shadow: 0 2px 2px #CCCCCC;
+  font-size: 18px;
+  min-height: 70%; 
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 20px;
+  }
+
+  a {
+    @extend %link;
+  }
+
+  pre {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  strong {
+    color: $primary-color;
+  }
+}
+
+  .post__title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+@media screen and( max-width: $ipad ) {
+  .post-container {
+    width: 90%;
+    padding: 30px;
+  }
+}

@@ -1,0 +1,116 @@
+/*-----------------------*\
+          MIXINS
+\*-----------------------*/
+
+@mixin bottom-radius( $unit: 20px ){
+  border-bottom-right-radius: $unit;
+  border-bottom-left-radius: $unit;
+  padding-bottom: $unit;
+}
+
+@mixin size( $width, $height ) {
+  width: $width;
+  height: $height;
+}
+
+@mixin font( $family, $size, $weight, $color: $title ) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin bg-header( $bg ) {
+  background-image: url($bg);
+}
+
+@mixin wrapper( $width, $position:initial ) {
+  width: $width;
+  margin: 0 auto;
+  position: $position;
+}
+
+@mixin arrow-post( $color: #666666, $colorHover: currentColor, $cursor: pointer ) {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 20px 15px 0;
+  border-color: transparent $color transparent transparent;
+  transition: .5s linear;
+  cursor: $cursor;
+
+  &:hover {
+    border-color: transparent $colorHover transparent transparent;
+    transition: .5s linear;
+  }
+}
+
+@mixin vertical-align ( $position: absolute, $transform: translateY(-50%) ) {
+  position: $position;
+  top: 50%;
+  transform: $transform;
+}
+
+/*-----------------------*\
+       PLACEHOLDERS
+\*-----------------------*/
+
+%theme-header {
+  @include bottom-radius(30px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 80%;
+}
+
+%text-overflow {
+  width: 90%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+%svg-steps {
+  svg {
+    fill: transparent;
+    stroke: currentColor;
+
+    &:hover path {
+      stroke: #FFFFFF;
+      transition: .5s ease-in-out;
+    }
+
+    &:hover circle {
+      fill: currentColor;
+    }
+
+    &:hover .inside-circle {
+      stroke: #FFF;
+    }
+
+    path, circle {
+      transition: .5s ease-in-out;
+    }
+  }
+}
+
+
+%link {
+  color: $primary-color;
+  display: inline-block;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 1px;
+    background: currentColor;
+    text-align: center;
+    transition: .5s ease-in-out;
+  }
+
+  &:hover:after {
+    width: 100%;
+    transition: .5s ease-in-out;
+  }
+}

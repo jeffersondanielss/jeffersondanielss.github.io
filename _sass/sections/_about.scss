@@ -1,0 +1,63 @@
+.about-work, .about-me {
+  @include j-cf();
+  padding: 100px 0px;
+
+  .wrapper-large {
+    @include j-cf();
+  }
+}
+
+  .about__ilustrations {
+    @include j-column(1/2);
+    font-size: 140px;
+    text-align: center;
+    color: $primary-color;
+  }
+
+    .about__ilustration {
+      @include j-column(1/3);
+    }
+
+      .about__ilustrations--me {
+        float: right;
+      }
+
+  .about__content {
+    @include j-column(1/2);
+  }
+
+    .about__content--me {
+      @extend .align-right;
+    }
+
+  .about__title {
+    margin-bottom: 40px;
+    font-size: 30px;
+  }
+
+  .about__text {
+    margin-bottom: 20px;
+  }
+
+
+@media screen and ( max-width: $ipad ) {
+
+  .about-work, .about-me {
+    padding: 50px 0px;
+  }
+  .about__ilustrations, .about__content {
+    @include j-column( 1/1, 0, 1 );
+  }
+
+  .about__ilustrations {
+    margin-bottom: 20px;
+  }
+
+  .about__ilustrations--me {
+    float: left;
+  }
+
+  .about__content--me {
+    text-align: left;
+  }
+}

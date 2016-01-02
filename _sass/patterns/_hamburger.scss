@@ -1,0 +1,93 @@
+/* Icon 1 */
+
+ #hamburger {
+  width: 50px;
+  height: 45px;
+  position: absolute;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  right: 30px;
+  top: 30px;
+  z-index: $level-10;
+}
+
+#hamburger span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 50%;
+  background: #FFFFFF;
+  opacity: 1;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+}
+
+#hamburger span:nth-child(even) {
+  left: 50%;
+  border-radius: 0 9px 9px 0;
+}
+
+#hamburger span:nth-child(odd) {
+  left:0px;
+  border-radius: 9px 0 0 9px;
+}
+
+
+#hamburger.open {
+  position: fixed;
+  
+  span {
+    background: $primary-color;
+  }
+}
+
+#hamburger span:nth-child(1), #hamburger span:nth-child(2) {
+  top: 0px;
+}
+
+#hamburger span:nth-child(3), #hamburger span:nth-child(4) {
+  top: 13px;
+}
+
+#hamburger span:nth-child(5), #hamburger span:nth-child(6) {
+  top: 26px;
+}
+
+#hamburger.open span:nth-child(1),#hamburger.open span:nth-child(6) {
+  transform: rotate(45deg);
+}
+
+#hamburger.open span:nth-child(2),#hamburger.open span:nth-child(5) {
+  transform: rotate(-45deg);
+}
+
+#hamburger.open span:nth-child(1) {
+  left: 5px;
+  top: 7px;
+}
+
+#hamburger.open span:nth-child(2) {
+  left: calc(50% - 5px);
+  top: 7px;
+}
+
+#hamburger.open span:nth-child(3) {
+  left: -50%;
+  opacity: 0;
+}
+
+#hamburger.open span:nth-child(4) {
+  left: 100%;
+  opacity: 0;
+}
+
+#hamburger.open span:nth-child(5) {
+  left: 5px;
+  top: 23px;
+}
+
+#hamburger.open span:nth-child(6) {
+  left: calc(50% - 5px);
+  top: 23px;
+}
