@@ -750,7 +750,7 @@ li {
 blockquote {
   margin: 0; }
 
-.clearfix:after {
+.clearfix:after, .project:after {
   clear: both;
   content: ' ';
   display: block;
@@ -760,13 +760,13 @@ blockquote {
   width: 0;
   height: 0; }
 
-.clearfix {
+.clearfix, .project {
   display: inline-block; }
 
-* html .clearfix {
+* html .clearfix, * html .project {
   height: 1%; }
 
-.clearfix {
+.clearfix, .project {
   display: block; }
 
 /*-----------------------*\
@@ -1108,6 +1108,21 @@ a {
 #disqus_thread {
   margin-top: 30px; }
 
+.bt {
+  background-color: #1B1E25;
+  color: #FFF;
+  transition: .5s linear;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  border-radius: 3px;
+  margin-left: 50%;
+  transform: translateX(-50%); }
+  .bt:hover {
+    transition: .5s linear;
+    background-color: #1B1E25;
+    color: #FFF; }
+
 .header, .header--little {
   background: #1B1E25;
   overflow: hidden;
@@ -1223,6 +1238,72 @@ a {
   font-size: 40px;
   margin-bottom: 40px; }
 
+.projects {
+  padding: 100px 0 0;
+  background: #F5F5F5;
+  float: left; }
+
+.projects__title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 70px; }
+
+.project {
+  margin-bottom: 100px; }
+
+.project__title {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px; }
+
+.project__ilustration--zipcode {
+  width: 50%;
+  float: left;
+  height: 300px;
+  -webkit-transform: skew(-16deg) translateX(-70px);
+  -ms-transform: skew(-16deg) translateX(-70px);
+  transform: skew(-16deg) translateX(-70px);
+  overflow: hidden; }
+  .project__ilustration--zipcode img {
+    -webkit-transform: skew(16deg) translateX(70px);
+    -ms-transform: skew(16deg) translateX(70px);
+    transform: skew(16deg) translateX(70px); }
+
+.project__ilustration--maps {
+  width: 50%;
+  float: right;
+  height: 300px;
+  -webkit-transform: skew(16deg) translateX(70px);
+  -ms-transform: skew(16deg) translateX(70px);
+  transform: skew(16deg) translateX(70px);
+  overflow: hidden; }
+  .project__ilustration--maps img {
+    -webkit-transform: skew(-16deg) translateX(-70px);
+    -ms-transform: skew(-16deg) translateX(-70px);
+    transform: skew(-16deg) translateX(-70px); }
+
+.project__content {
+  width: 50%;
+  float: left;
+  font-size: 18px; }
+
+.project__description {
+  line-height: 27px; }
+
+@media screen and (max-width: 768px) {
+  .project__ilustration--zipcode,
+  .project__ilustration--maps {
+    transform: none;
+    width: 100%; }
+    .project__ilustration--zipcode img,
+    .project__ilustration--maps img {
+      transform: none; }
+
+  .project__content {
+    width: 100%; }
+
+  .project__title {
+    margin-top: 20px; } }
 .post-page {
   background: #F5F5F5; }
 

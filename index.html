@@ -15,27 +15,40 @@ layout: home
 
 </section>
 
-<section class="about-me">
-  <div class="wrapper-large">
-    <div class="about__ilustrations about__ilustrations--me">
-       <figure class="about__ilustration">
-          <img src="assets/svgs/long.svg" alt="">
-        </figure>
-        <figure class="about__ilustration">
-          <img src="assets/svgs/bottle.svg" alt="">
-        </figure>
-        <figure class="about__ilustration">
-          <img src="assets/svgs/guitar.svg" alt="">
-        </figure>
-     </div>
+<section class="projects" id="projects">
+  <h3 class="projects__title">Projetos</h3>
 
-    <div class="about__content about__content--me">
-      <h2 class="about__title">Fora do trabalho</h2>
-      <p class="about__text">Ainda fora do trabalho gasto algum tempo com os códigos, seja fuçando o github, lendo artigos etc, mas longe das telas dos computadores, em resumo curto andar de longboard, que cai entre nós é essencial para dar uma relaxada do mundo virtual.</p>
+  <div class="project">
+    <div class="project__ilustration--zipcode">
+      <img src="{{ site.baseurl }}/assets/images/zipcode.png" alt="">
+    </div>
+    <div class="project__content">
+      <div class="wrapper">
+        <h3 class="project__title">zipcode</h3>
+        <p class="project__description">Após receber o cep esse plugin busca a API do Postmon que retorna as informações relacionadas a endereçamento, com isso, logo após que o usuário preenche seu cep e muda de campo, os campos de endereço, cidade, estado e bairro são preenchidos automaticamente com os dados consumidos por essa API.</p>
 
-      <p class="about__text">Gosto muito de música e apesar de não ter nascido com o dom para a coisa arrisco alguns acordes no violão de vez em quando. bebida favoríta? wisky!, afinal ninguém é de ferro.</p>
+        <a href="http://jeffersondanielss.github.io/zipcode/" class="bt" target="_blank">Ver mais</a>
+      </div>
+
     </div>
   </div>
+
+  <div class="project">
+    <div class="project__ilustration--maps">
+      <img src="{{ site.baseurl }}/assets/images/custom-google-maps.png" alt="">
+    </div>
+    <div class="project__content">
+      <div class="wrapper">
+        <h3 class="project__title">custom google maps</h3>
+        <p class="project__description">Com a ajuda da API do Google Maps, esse plugin resume alguma de suas possibilidades de customização do mapa original que o Google Maps fornece para os desenvolvedores, deixando mais prática a mudança do endereço do mapa, pin, cores, etc.</p>
+
+        <a href="http://jeffersondanielss.github.io/custom-google-maps/" class="bt" target="_blank">Ver mais</a>
+      </div>
+
+    </div>
+  </div>
+
+
 </section>
 
 <section class="blog" id="blog">
