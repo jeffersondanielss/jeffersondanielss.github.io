@@ -7,10 +7,9 @@ layout: cv
   <span class="comment-block__line">Curriculum</span>
   <span class="comment-block__line">&nbsp;</span>
   <span class="comment-block__line">You don't recognizes nothing that is written in here?</span>
-  <span class="comment-block__line">Maybe is beter you see a PDF</span>
+  <span class="comment-block__line">Maybe is beter you back to home</span>
   <span class="comment-block__line">&nbsp;</span>
-  <span class="comment-block__line"><a href="#">PDF (en)</a></span>
-  <span class="comment-block__line"><a href="#">PDF (pt-br)</a></span>
+  <span class="comment-block__line"><a href="http://jeffersondanielss.github.io/"> - Home -</a></span>
   <span class="comment-block__line">&nbsp;</span>
   <span class="comment-block__line">*****************************************************</span>
 </p><br>
@@ -215,5 +214,3 @@ layout: cv
     <dd class="value">photograpy</dd>
   </dl>
 </div>
-
-<div class="notice">teste</div>
