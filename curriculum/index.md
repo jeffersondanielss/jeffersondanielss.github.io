@@ -1,0 +1,219 @@
+---
+layout: cv
+---
+
+<p class="comment-block">
+  <span class="comment-block__line">*****************************************************</span>
+  <span class="comment-block__line">Curriculum</span>
+  <span class="comment-block__line">&nbsp;</span>
+  <span class="comment-block__line">You don't recognizes nothing that is written in here?</span>
+  <span class="comment-block__line">Maybe is beter you see a PDF</span>
+  <span class="comment-block__line">&nbsp;</span>
+  <span class="comment-block__line"><a href="#">PDF (en)</a></span>
+  <span class="comment-block__line"><a href="#">PDF (pt-br)</a></span>
+  <span class="comment-block__line">&nbsp;</span>
+  <span class="comment-block__line">*****************************************************</span>
+</p><br>
+
+<div class="ruleset">
+  <h3 class="selector">Me</h3>
+
+  <dl class="declarations">
+
+    <dt class="property">Name</dt>
+    <dd class="value"><span class="string">Jefferson Daniel Santos Silva</span></dd>
+
+    <dt class="property">Job</dt>
+    <dd class="value"><span class="string">Front-end Developer</span></dd>
+
+    <dt class="property">Location</dt>
+    <dd class="value"><span class="string">São Paulo - SP</span></dd>
+
+    <dt class="property">links</dt>
+    <dd class="value">
+      <a href="http://github.com/jeffersondanielss" target="_blank">github</a>,
+      <a href="http://jeffersondanielss.github.io" target="_blank">website</a></dd>
+
+  </dl>
+</div>
+
+<div class="ruleset">
+  <h3 class="selector">courses</h3>
+
+  <dl class="declarations">
+
+    <dt class="property">senai</dt>
+    <dd class="value"><span class="string">Management techniques with computing</span></dd>
+
+    <dt class="property">TreinaSoft</dt>
+    <dd class="value"><span class="string">Web Design</span></dd>
+
+    <dt class="property">Senac </dt>
+    <dd class="value"><span class="string">HTML5 and CSS3</span></dd>
+
+    <dt class="property">Softblue  </dt>
+    <dd class="value"><span class="string">Programming logic</span></dd>
+
+    <dt class="property">Uninove</dt>
+    <dd class="value"><span class="string">Technology for internet systems</span></dd>
+
+  </dl>
+</div>
+
+<div class="ruleset">
+  <h3 class="selector">experience</h3>
+
+  <dl class="declarations">
+
+    <dt class="property">years</dt>
+    <dd class="value">3</dd> </dl>
+</div>
+
+<div class="ruleset indented">
+  <h3 class="selector">experience__mega-digital-brasil</h3>
+
+  <dl class="declarations">
+
+    <dt class="property">date</dt>
+    <dd class="value"> 04/2013 - 09/2014</dd>
+
+    <dt class="property">Office</dt>
+    <dd class="value"><span class="string">Web Designer</span></dd>
+
+    <dt class="property">Activities </dt>
+    <dd class="value"><span class="string">Creating responsive websites in HTML/CSS.</span></dd>
+
+  </dl>
+</div>
+
+<div class="ruleset indented">
+  <h3 class="selector">experience__dbr</h3>
+
+  <dl class="declarations">
+
+    <dt class="property">date</dt>
+    <dd class="value"> 09/2014 - current</dd>
+
+    <dt class="property">Office</dt>
+    <dd class="value"><span class="string">Front-end developer</span></dd>
+
+    <dt class="property">Activities </dt>
+    <dd class="value"><span class="string">Responsible for front-end development of the company, working on the creation of sites, SPAs, and integration of static websites with Wordpress.</span></dd>
+
+  </dl>
+</div>
+
+<div class="ruleset">
+  <h3 class="selector">skills</h3>
+
+  <dl class="declarations">
+
+    <dt class="property">Languages</dt>
+    <dd class="value">
+      <ul class="value-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JS</li>
+          <li>PHP</li>
+          <li>C#</li>
+          <li>C++</li>
+        </ul>
+    </dd>
+
+    <dt class="property">fav-tools</dt>
+    <dd class="value">
+      <ul class="value-list">
+          <li>GIT</li>
+          <li>Tower</li>
+          <li>Bower</li>
+          <li>Angular</li>
+          <li>Grunt</li>
+          <li>SASS</li>
+          <li>Node.js</li>
+        </ul>
+    </dd>
+
+  </dl>
+</div>
+
+<div class="ruleset indented">
+  <h3 class="selector">skills__level</h3>
+
+  <dl class="declarations">
+
+    <dt class="property">HTML</dt>
+    <dd class="value">99%</dd>
+
+    <dt class="property">CSS</dt>
+    <dd class="value">80%</dd>
+
+    <dt class="property">JS</dt>
+    <dd class="value">70%</dd>
+
+    <dt class="property">SASS</dt>
+    <dd class="value">80%</dd>
+
+    <dt class="property">GIT</dt>
+    <dd class="value">60%</dd>
+
+        <dt class="property">Angular</dt>
+    <dd class="value">30%</dd>
+
+    <dt class="property">C#</dt>
+    <dd class="value"><span class="string">Just academic works</span></dd>
+
+    <dt class="property">C++</dt>
+    <dd class="value"><span class="string">Just academic works</span></dd>
+
+  </dl>
+</div>
+
+<div class="ruleset">
+  <h3 class="selector">free-time</h3>
+
+  <dl class="declarations">
+
+    <dt class="property">Fun</dt>
+    <dd class="value">
+      <ul class="value-list">
+          <li><span class="string">Ride a longboard</span></li>
+          <li><span class="string">Play Xbox</span></li>
+          <li><span class="string">Play violão</span></li>
+          <li><span class="string">Drink with friends</span></li>
+          <li><span class="string">travel</span></li>
+        </ul>
+    </dd>
+
+    <dt class="property">studies</dt>
+    <dd class="value">
+      <ul class="value-list">
+          <li>Javascript</li>
+          <li>Politic</li>
+        </ul>
+    </dd>
+
+  </dl>
+</div>
+
+<div class="ruleset">
+  <h3 class="selector">interest-studies</h3>
+
+  <dl class="declarations">
+
+    <dt class="property">Language</dt>
+    <dd class="value">English !important</dd>
+
+    <dt class="property">Frameworks</dt>
+    <dd class="value">
+      <ul class="value-list">
+          <li>AngularJs</li>
+          <li>React</li>
+        </ul>
+    </dd>
+
+    <dt class="property">Hobby</dt>
+    <dd class="value">photograpy</dd>
+  </dl>
+</div>
+
+<div class="notice">teste</div>

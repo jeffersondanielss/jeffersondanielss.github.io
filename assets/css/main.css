@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+clike+javascript */
 /**
  * okaidia theme for JavaScript, CSS and HTML
@@ -101,6 +102,305 @@ pre[class*="language-"] {
 
 .token.entity {
   cursor: help; }
+
+/*------------------------------------*\
+    CSSCV
+\*------------------------------------*/
+/*!*
+ * 
+ * CSSCV -- csswizardry.com/csscv -- @csswizardry
+ * 
+ */
+/**
+ * CSSCV is a simple, opinionated stylesheet for formatting semantic HTML to
+ * look like a CSS file. Apply the class of `.csscv` to the `html` element of
+ * your page to invoke the CSSCV stylesheet. Removing this class will leave you
+ * with an unstyled page of pure, semantic HTML. This is useful if you wish to
+ * disable CSSCV in order to style your page more suitably for recruiters and
+ * more serious applications.
+ */
+.csscv {
+  /*------------------------------------*\
+      #CONTENTS
+  \*------------------------------------*/
+  /**
+   * SETTINGS
+   * RESET
+   * HELPERS
+   * BASE
+   * RULESETS
+   * SELECTORS
+   * DECLARATIONS
+   * PROPERTIES
+   * VALUES
+   * STRINGS
+   * NUMBERS
+   * URLS
+   * LISTS
+   * BEM
+   * COMMENTS
+   * NOTICE
+   */
+  /*------------------------------------*\
+      #SETTINGS
+  \*------------------------------------*/
+  /**
+   * How big would you like your tabs to be?
+   */
+  /**
+   * Colour settings.
+   */
+  /**
+   * Reassign colour variables to better names.
+   */
+  /*------------------------------------*\
+      #RESET
+  \*------------------------------------*/
+  /**
+   * This is a pretty poor reset, but it will suffice for a single-page, single-
+   * responsibility stylesheet.
+   *
+   * 1. Everything the same size (16px by default).
+   * 2. Fixes an odd font-sizing issue in some browsers.
+   */
+  /*------------------------------------*\
+      #HELPERS
+  \*------------------------------------*/
+  /**
+   * Little helper classes to allow us to quickly build stuff.
+   *
+   * 1. Space apart our rulesets by the same value as our line-height.
+   */
+  /*------------------------------------*\
+      #BASE
+  \*------------------------------------*/
+  /**
+   * 1. Comfortable line-height (equivalent to 24px).
+   * 2. Pad the page by the same value as our line-height.
+   */
+  /*------------------------------------*\
+      #RULESETS
+  \*------------------------------------*/
+  /**
+   * Wrap our selector and declarations in an element with a class of `.ruleset`.
+   */
+  /*------------------------------------*\
+      #SELECTORS
+  \*------------------------------------*/
+  /**
+   * Each section is marked up as a heading which becomes our selector. We assume
+   * all our selectors will be classes.
+   *
+   * 1. Lowercase our class names.
+   * 2. Prepend a period.
+   * 3. Append an opening brace.
+   */
+  /**
+   * Insert a hyphen in place of a space in multiple word selectors.
+   *
+   * 1. Force the empty element to take up its space.
+   */
+  /*------------------------------------*\
+      #DECLARATIONS
+  \*------------------------------------*/
+  /**
+   * Each block of declarations is marked up as a definition list with a class of
+   * `.declarations`.
+   *
+   * 1. Close our declarations with a curly brace.
+   */
+  /*------------------------------------*\
+      #PROPERTIES
+  \*------------------------------------*/
+  /**
+   * A `dt` and `dd` form a propertyÔÇôvalue pair (i.e. declaration). Each `dt` gets
+   * a class of `.property`.
+   *
+   * 1. Indent our declarations based on the chosen tab size.
+   * 2. End each property with a colon and a space.
+   */
+  /*------------------------------------*\
+      #VALUES
+  \*------------------------------------*/
+  /**
+   * Each `dd` gets a class of `.value`.
+   *
+   * 1. End each value with a semi-colon.
+   */
+  /*------------------------------------*\
+      #STRINGS
+  \*------------------------------------*/
+  /**
+   * Strings in CSS (such as font names) need to be enclosed in quotes. Wrap
+   * strings in your CV with a `span` with a class of `.string`, e.g.
+   * `<span class="string">Harry Roberts</span>`.
+   */
+  /*------------------------------------*\
+      #NUMBERS
+  \*------------------------------------*/
+  /**
+   * Numbers in values need wrapping in a `.number` element.
+   */
+  /*------------------------------------*\
+      #URLS
+  \*------------------------------------*/
+  /**
+   * Wrap any URLs with a `span` with a class of `.url`.
+   */
+  /*------------------------------------*\
+      #LISTS
+  \*------------------------------------*/
+  /**
+   * Lists of values should be marked up with a `ul` with a class of `.value-list`.
+   */
+  /*------------------------------------*\
+      #BEM
+  \*------------------------------------*/
+  /**
+   * Denote any relationships within your CV with BEM-style naming.
+   *
+   * 1. An element of an item is prepended with the namespace you set (via
+   *    `data-namespace` in your markup) and two underscores.
+   * 2. A modifier of an item is prepended with the namespace you set (via
+   *    `data-namespace` in your markup) and two hyphens.
+   */
+  /*------------------------------------*\
+      #COMMENTS
+  \*------------------------------------*/
+  /**
+   * Create inline comments.
+   */
+  /**
+   * Create multi-line, DocBlock style comments.
+   */
+  /*------------------------------------*\
+      #NOTICE
+  \*------------------------------------*/
+  /**
+   * The attribution notice that appears at the bottom of a CSSCV page.
+   *
+   * 1. Only display the message if CSSCV is enabled; the notice carries an inline
+   *    style of `display: none;` which will take effect once CSSCV is disabled.
+   */ }
+  .csscv * {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    /* [1] */
+    font-family: monospace, monospace;
+    /* [2] */
+    font-weight: normal; }
+  .csscv .spaced,
+  .csscv .ruleset,
+  .csscv .notice {
+    margin-bottom: 24px;
+    /* [1] */
+    margin-bottom: 1.5rem;
+    /* [1] */ }
+  .csscv .spaced--large {
+    margin-bottom: 120px;
+    margin-bottom: 7.5rem; }
+  .csscv .indented {
+    padding-left: 2.5em; }
+  .csscv {
+    line-height: 1.5;
+    /* [1] */
+    padding: 24px;
+    /* [2] */
+    padding: 1.5rem;
+    /* [2] */
+    padding-bottom: 0;
+    color: #4f6c73;
+    background-color: #002935; }
+  .csscv a {
+    color: inherit; }
+  .csscv .selector {
+    color: #0083ce;
+    text-transform: lowercase;
+    /* [1] */ }
+    .csscv .selector:before {
+      content: ".";
+      /* [2] */ }
+    .csscv .selector:after {
+      content: " {";
+      /* [3] */ }
+  .csscv .selector__delimiter {
+    position: relative;
+    white-space: pre;
+    /* [1] */ }
+    .csscv .selector__delimiter:before {
+      content: "-";
+      position: absolute;
+      display: inline-block;
+      width: .625em;
+      text-align: center; }
+  .csscv .declarations:after {
+    content: "}";
+    /* [1] */
+    color: #0083ce; }
+  .csscv .property {
+    text-transform: lowercase;
+    float: left;
+    clear: both;
+    padding-left: 2.5em;
+    /* [1] */
+    color: #b58a0a; }
+    .csscv .property:after {
+      content: ":\00A0";
+      /* [2] */
+      color: #7f9597; }
+  .csscv .value {
+    color: #b58a0a; }
+    .csscv .value:after {
+      content: ";";
+      /* [1] */
+      color: #7f9597; }
+  .csscv .string {
+    color: #00a19b; }
+    .csscv .string:before, .csscv .string:after {
+      content: "\""; }
+  .csscv .number {
+    color: #00a19b; }
+  .csscv .url:before {
+    content: "url("; }
+  .csscv .url:after {
+    content: ")"; }
+  .csscv .value-list {
+    list-style: none;
+    display: inline; }
+    .csscv .value-list > li {
+      display: inline; }
+      .csscv .value-list > li:after {
+        content: ", "; }
+      .csscv .value-list > li:last-child:after {
+        content: ""; }
+  .csscv .element:before {
+    content: attr(data-namespace) "__";
+    /* [1] */ }
+  .csscv .modifier:before {
+    content: attr(data-namespace) "--";
+    /* [2] */ }
+  .csscv .comment {
+    color: #7f9597; }
+    .csscv .comment:before {
+      content: "/* "; }
+    .csscv .comment:after {
+      content: " */"; }
+  .csscv .comment-block {
+    color: #7f9597; }
+    .csscv .comment-block:before, .csscv .comment-block:after {
+      display: block; }
+    .csscv .comment-block:before {
+      content: "/**"; }
+    .csscv .comment-block:after {
+      content: "\00A0*/"; }
+  .csscv .comment-block__line {
+    display: block; }
+    .csscv .comment-block__line:before {
+      content: "\00A0*\00A0"; }
+  .csscv .notice {
+    display: block !important;
+    /* [1] */ }
 
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
