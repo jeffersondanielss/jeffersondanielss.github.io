@@ -1249,7 +1249,8 @@ a {
   margin-bottom: 70px; }
 
 .project {
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  overflow: hidden; }
 
 .project__title {
   text-align: center;

@@ -13,6 +13,7 @@
   .project {
     @extend .clearfix;
     margin-bottom: 100px;
+    overflow: hidden;
   }
 
   .project__title {
