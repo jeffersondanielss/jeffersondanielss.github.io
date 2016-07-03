@@ -1257,7 +1257,7 @@ a {
   font-size: 26px;
   margin-bottom: 20px; }
 
-.project__ilustration--zipcode {
+.project__ilustration--left {
   width: 50%;
   float: left;
   height: 300px;
@@ -1265,12 +1265,12 @@ a {
   -ms-transform: skew(-16deg) translateX(-70px);
   transform: skew(-16deg) translateX(-70px);
   overflow: hidden; }
-  .project__ilustration--zipcode img {
+  .project__ilustration--left img {
     -webkit-transform: skew(16deg) translateX(70px);
     -ms-transform: skew(16deg) translateX(70px);
     transform: skew(16deg) translateX(70px); }
 
-.project__ilustration--maps {
+.project__ilustration--right {
   width: 50%;
   float: right;
   height: 300px;
@@ -1278,7 +1278,7 @@ a {
   -ms-transform: skew(16deg) translateX(70px);
   transform: skew(16deg) translateX(70px);
   overflow: hidden; }
-  .project__ilustration--maps img {
+  .project__ilustration--right img {
     -webkit-transform: skew(-16deg) translateX(-70px);
     -ms-transform: skew(-16deg) translateX(-70px);
     transform: skew(-16deg) translateX(-70px); }
