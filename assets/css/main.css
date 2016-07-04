@@ -1292,12 +1292,12 @@ a {
   line-height: 27px; }
 
 @media screen and (max-width: 768px) {
-  .project__ilustration--zipcode,
-  .project__ilustration--maps {
+  .project__ilustration--left,
+  .project__ilustration--right {
     transform: none;
     width: 100%; }
-    .project__ilustration--zipcode img,
-    .project__ilustration--maps img {
+    .project__ilustration--left img,
+    .project__ilustration--right img {
       transform: none; }
 
   .project__content {
