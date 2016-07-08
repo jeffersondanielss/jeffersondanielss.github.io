@@ -213,7 +213,7 @@ pre[class*="language-"] {
       #PROPERTIES
   \*------------------------------------*/
   /**
-   * A `dt` and `dd` form a propertyÔÇôvalue pair (i.e. declaration). Each `dt` gets
+   * A `dt` and `dd` form a property–value pair (i.e. declaration). Each `dt` gets
    * a class of `.property`.
    *
    * 1. Indent our declarations based on the chosen tab size.
@@ -1291,13 +1291,16 @@ a {
 .project__description {
   line-height: 27px; }
 
+@media screen and (min-width: 1500px) {
+  .project__ilustration--left, .project__ilustration--right {
+    width: 36%; } }
 @media screen and (max-width: 768px) {
-  .project__ilustration--zipcode,
-  .project__ilustration--maps {
+  .project__ilustration--left,
+  .project__ilustration--right {
     transform: none;
     width: 100%; }
-    .project__ilustration--zipcode img,
-    .project__ilustration--maps img {
+    .project__ilustration--left img,
+    .project__ilustration--right img {
       transform: none; }
 
   .project__content {
@@ -1327,7 +1330,9 @@ a {
   font-size: 18px;
   min-height: 70%; }
   .post-container p {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    line-height: 32px;
+    font-size: 20px; }
   .post-container h1, .post-container h2, .post-container h3, .post-container h4, .post-container h5, .post-container h6 {
     margin-bottom: 20px; }
   .post-container pre {
