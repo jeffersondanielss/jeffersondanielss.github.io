@@ -3,8 +3,8 @@
 
   <head>
   <meta charset="utf-8">
-  <title>Hello world</title>
-   <meta name="description" content="Oláá, aqui nasce o primeiro post :), Já vou começar com um cliche:">
+  <title>SASS</title>
+   <meta name="description" content="Usando poderes do SASS">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="shortcut icon" href="/favicon.png">
@@ -60,22 +60,49 @@
 
 <section class="post-container" itemscope itemtype="http://schema.org/BlogPosting">
   <div class="post__date">
-    <time datetime="2015-12-19T21:47:00-02:00" itemprop="datePublished">
-      Dec 19, 2015
+    <time datetime="2016-08-01T19:00:28-03:00" itemprop="datePublished">
+      Aug 1, 2016
     </time>
   </div>
-    <h1 class="post__title" itemprop="name headline">Hello world</h1>
+    <h1 class="post__title" itemprop="name headline">SASS</h1>
 
-    <p>Oláá, aqui nasce o primeiro post :), Já vou começar com um cliche:</p>
+    <h1 id="usando-poderes-do-sass">Usando poderes do SASS</h1>
 
-<h4 id="ensinado-que-se-aprende">“É ensinado que se aprende.”</h4>
+<p>Que os pré-processadores facilitam nossa vida na hora de criar as nossas interfaces já não é novidade, o uso deles já é bem comum mesmo em aplicações em baixíssima escala.</p>
 
-<p>A algum tempo atraz começei a fazer o <a href="http://dagora.net/be-mean" target="_blank">Be-mean</a>, um curso sobre full-stack em javascript. E no meio do percurso tinha como tarefa fazer um artigo sobre variáveis, dai veio a vontade de escrever um pouco mais para compartilhar o que venho aprendendo ai nesses dois anos como desenvolvedor front-end, não é muito tempo mas já é um começo.</p>
+<p>Mas mesmo sabendo de suas amplas funcionalidades as vezes acabamos usando apenas as mais simples, encadeamento de seletores, <strong>$variáveis</strong>, <strong>@mixins</strong>, <strong>%placeholders</strong>.</p>
 
-<p>Pretendo postar aqui na maioria das vezes coisas sobre javascript que é o que mais venho estudando comprando livros e tal, mas provavelmente ira ter posts sobre outros assuntos.
-Sem mais delongas..</p>
+<p>Nesse posts vou tentar te convencer que podemos tirar mais proveito dessa ferramenta com usos simples de features como <strong>@function</strong>, <strong>@each</strong>, <strong>map</strong>, <strong>darken</strong>, <strong>Logitech</strong>, <strong>@for</strong>, <strong>@if</strong>.</p>
 
-<p><strong>Let’s go!</strong></p>
+<h2 id="baby-steps-darken-e-lighten">Baby steps, darken e lighten</h2>
+
+<p>Podemos começar com os mais simples, o darken e o lighten, os dois tem muito em comum, são funções que recebem dois parâmetros, o primeiro é uma cor, e o segundo um valor em porcentagem que irá alterar essa cor do primeiro parâmetro.</p>
+
+<p>A diferença é que o lighten irá deixar essa cor mais clara e o darken mais escura.a</p>
+
+<pre>
+  <code class="language-scss">
+.class {
+  color: darken(#ff0000, 20%);
+  color: lighten(#FF0000, 20%);
+}
+  </code>
+</pre>
+<pre><code class="language-scss">p { color: red }</code></pre>
+
+<p>Podemos usar isso em bordas de botões, divisores, sub títulos.</p>
+
+<h3 id="function">Function</h3>
+
+<p>No SASS</p>
+
+<h3 id="each">Each</h3>
+
+<p>Ea</p>
+
+<h3 id="map">Map</h3>
+
+<h3 id="if">If</h3>
 
 
     <div id="disqus_thread"></div>

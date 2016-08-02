@@ -164,8 +164,7 @@ div.prism-show-language > div.prism-show-language-label {
   -o-transform: none;
   transform: none; }
 
-/*------------------------------------*\
-    CSSCV
+/*------------------------------------*    CSSCV
 \*------------------------------------*/
 /*!*
  * 
@@ -181,168 +180,151 @@ div.prism-show-language > div.prism-show-language-label {
  * more serious applications.
  */
 .csscv {
-  /*------------------------------------*\
-      #CONTENTS
-  \*------------------------------------*/
+  /*------------------------------------*    #CONTENTS
+\*------------------------------------*/
   /**
-   * SETTINGS
-   * RESET
-   * HELPERS
-   * BASE
-   * RULESETS
-   * SELECTORS
-   * DECLARATIONS
-   * PROPERTIES
-   * VALUES
-   * STRINGS
-   * NUMBERS
-   * URLS
-   * LISTS
-   * BEM
-   * COMMENTS
-   * NOTICE
-   */
-  /*------------------------------------*\
-      #SETTINGS
-  \*------------------------------------*/
+ * SETTINGS
+ * RESET
+ * HELPERS
+ * BASE
+ * RULESETS
+ * SELECTORS
+ * DECLARATIONS
+ * PROPERTIES
+ * VALUES
+ * STRINGS
+ * NUMBERS
+ * URLS
+ * LISTS
+ * BEM
+ * COMMENTS
+ * NOTICE
+ */
+  /*------------------------------------*    #SETTINGS
+\*------------------------------------*/
   /**
-   * How big would you like your tabs to be?
-   */
+ * How big would you like your tabs to be?
+ */
   /**
-   * Colour settings.
-   */
+ * Colour settings.
+ */
   /**
-   * Reassign colour variables to better names.
-   */
-  /*------------------------------------*\
-      #RESET
-  \*------------------------------------*/
+ * Reassign colour variables to better names.
+ */
+  /*------------------------------------*    #RESET
+\*------------------------------------*/
   /**
-   * This is a pretty poor reset, but it will suffice for a single-page, single-
-   * responsibility stylesheet.
-   *
-   * 1. Everything the same size (16px by default).
-   * 2. Fixes an odd font-sizing issue in some browsers.
-   */
-  /*------------------------------------*\
-      #HELPERS
-  \*------------------------------------*/
+ * This is a pretty poor reset, but it will suffice for a single-page, single-
+ * responsibility stylesheet.
+ *
+ * 1. Everything the same size (16px by default).
+ * 2. Fixes an odd font-sizing issue in some browsers.
+ */
+  /*------------------------------------*    #HELPERS
+\*------------------------------------*/
   /**
-   * Little helper classes to allow us to quickly build stuff.
-   *
-   * 1. Space apart our rulesets by the same value as our line-height.
-   */
-  /*------------------------------------*\
-      #BASE
-  \*------------------------------------*/
+ * Little helper classes to allow us to quickly build stuff.
+ *
+ * 1. Space apart our rulesets by the same value as our line-height.
+ */
+  /*------------------------------------*    #BASE
+\*------------------------------------*/
   /**
-   * 1. Comfortable line-height (equivalent to 24px).
-   * 2. Pad the page by the same value as our line-height.
-   */
-  /*------------------------------------*\
-      #RULESETS
-  \*------------------------------------*/
+ * 1. Comfortable line-height (equivalent to 24px).
+ * 2. Pad the page by the same value as our line-height.
+ */
+  /*------------------------------------*    #RULESETS
+\*------------------------------------*/
   /**
-   * Wrap our selector and declarations in an element with a class of `.ruleset`.
-   */
-  /*------------------------------------*\
-      #SELECTORS
-  \*------------------------------------*/
+ * Wrap our selector and declarations in an element with a class of `.ruleset`.
+ */
+  /*------------------------------------*    #SELECTORS
+\*------------------------------------*/
   /**
-   * Each section is marked up as a heading which becomes our selector. We assume
-   * all our selectors will be classes.
-   *
-   * 1. Lowercase our class names.
-   * 2. Prepend a period.
-   * 3. Append an opening brace.
-   */
+ * Each section is marked up as a heading which becomes our selector. We assume
+ * all our selectors will be classes.
+ *
+ * 1. Lowercase our class names.
+ * 2. Prepend a period.
+ * 3. Append an opening brace.
+ */
   /**
-   * Insert a hyphen in place of a space in multiple word selectors.
-   *
-   * 1. Force the empty element to take up its space.
-   */
-  /*------------------------------------*\
-      #DECLARATIONS
-  \*------------------------------------*/
+     * Insert a hyphen in place of a space in multiple word selectors.
+     *
+     * 1. Force the empty element to take up its space.
+     */
+  /*------------------------------------*    #DECLARATIONS
+\*------------------------------------*/
   /**
-   * Each block of declarations is marked up as a definition list with a class of
-   * `.declarations`.
-   *
-   * 1. Close our declarations with a curly brace.
-   */
-  /*------------------------------------*\
-      #PROPERTIES
-  \*------------------------------------*/
+ * Each block of declarations is marked up as a definition list with a class of
+ * `.declarations`.
+ *
+ * 1. Close our declarations with a curly brace.
+ */
+  /*------------------------------------*    #PROPERTIES
+\*------------------------------------*/
   /**
-   * A `dt` and `dd` form a propertyÔÇôvalue pair (i.e. declaration). Each `dt` gets
-   * a class of `.property`.
-   *
-   * 1. Indent our declarations based on the chosen tab size.
-   * 2. End each property with a colon and a space.
-   */
-  /*------------------------------------*\
-      #VALUES
-  \*------------------------------------*/
+ * A `dt` and `dd` form a property–value pair (i.e. declaration). Each `dt` gets
+ * a class of `.property`.
+ *
+ * 1. Indent our declarations based on the chosen tab size.
+ * 2. End each property with a colon and a space.
+ */
+  /*------------------------------------*    #VALUES
+\*------------------------------------*/
   /**
-   * Each `dd` gets a class of `.value`.
-   *
-   * 1. End each value with a semi-colon.
-   */
-  /*------------------------------------*\
-      #STRINGS
-  \*------------------------------------*/
+ * Each `dd` gets a class of `.value`.
+ *
+ * 1. End each value with a semi-colon.
+ */
+  /*------------------------------------*    #STRINGS
+\*------------------------------------*/
   /**
-   * Strings in CSS (such as font names) need to be enclosed in quotes. Wrap
-   * strings in your CV with a `span` with a class of `.string`, e.g.
-   * `<span class="string">Harry Roberts</span>`.
-   */
-  /*------------------------------------*\
-      #NUMBERS
-  \*------------------------------------*/
+ * Strings in CSS (such as font names) need to be enclosed in quotes. Wrap
+ * strings in your CV with a `span` with a class of `.string`, e.g.
+ * `<span class="string">Harry Roberts</span>`.
+ */
+  /*------------------------------------*    #NUMBERS
+\*------------------------------------*/
   /**
-   * Numbers in values need wrapping in a `.number` element.
-   */
-  /*------------------------------------*\
-      #URLS
-  \*------------------------------------*/
+ * Numbers in values need wrapping in a `.number` element.
+ */
+  /*------------------------------------*    #URLS
+\*------------------------------------*/
   /**
-   * Wrap any URLs with a `span` with a class of `.url`.
-   */
-  /*------------------------------------*\
-      #LISTS
-  \*------------------------------------*/
+ * Wrap any URLs with a `span` with a class of `.url`.
+ */
+  /*------------------------------------*    #LISTS
+\*------------------------------------*/
   /**
-   * Lists of values should be marked up with a `ul` with a class of `.value-list`.
-   */
-  /*------------------------------------*\
-      #BEM
-  \*------------------------------------*/
+ * Lists of values should be marked up with a `ul` with a class of `.value-list`.
+ */
+  /*------------------------------------*    #BEM
+\*------------------------------------*/
   /**
-   * Denote any relationships within your CV with BEM-style naming.
-   *
-   * 1. An element of an item is prepended with the namespace you set (via
-   *    `data-namespace` in your markup) and two underscores.
-   * 2. A modifier of an item is prepended with the namespace you set (via
-   *    `data-namespace` in your markup) and two hyphens.
-   */
-  /*------------------------------------*\
-      #COMMENTS
-  \*------------------------------------*/
+ * Denote any relationships within your CV with BEM-style naming.
+ *
+ * 1. An element of an item is prepended with the namespace you set (via
+ *    `data-namespace` in your markup) and two underscores.
+ * 2. A modifier of an item is prepended with the namespace you set (via
+ *    `data-namespace` in your markup) and two hyphens.
+ */
+  /*------------------------------------*    #COMMENTS
+\*------------------------------------*/
   /**
-   * Create inline comments.
-   */
+ * Create inline comments.
+ */
   /**
-   * Create multi-line, DocBlock style comments.
-   */
-  /*------------------------------------*\
-      #NOTICE
-  \*------------------------------------*/
+ * Create multi-line, DocBlock style comments.
+ */
+  /*------------------------------------*    #NOTICE
+\*------------------------------------*/
   /**
-   * The attribution notice that appears at the bottom of a CSSCV page.
-   *
-   * 1. Only display the message if CSSCV is enabled; the notice carries an inline
-   *    style of `display: none;` which will take effect once CSSCV is disabled.
-   */ }
+ * The attribution notice that appears at the bottom of a CSSCV page.
+ *
+ * 1. Only display the message if CSSCV is enabled; the notice carries an inline
+ *    style of `display: none;` which will take effect once CSSCV is disabled.
+ */ }
   .csscv * {
     margin: 0;
     padding: 0;
@@ -351,9 +333,7 @@ div.prism-show-language > div.prism-show-language-label {
     font-family: monospace, monospace;
     /* [2] */
     font-weight: normal; }
-  .csscv .spaced,
-  .csscv .ruleset,
-  .csscv .notice {
+  .csscv .spaced, .csscv .ruleset, .csscv .notice {
     margin-bottom: 24px;
     /* [1] */
     margin-bottom: 1.5rem;
@@ -830,11 +810,41 @@ blockquote {
 .clearfix, .project {
   display: block; }
 
-/*-----------------------*\
-          MIXINS
+/* latin-ext */
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Dosis Light"), local("Dosis-Light"), url(https://fonts.gstatic.com/s/dosis/v6/SHQzTQBI7152hSrIuGUiVBTbgVql8nDJpwnrE27mub0.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+
+/* latin */
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Dosis Light"), local("Dosis-Light"), url(https://fonts.gstatic.com/s/dosis/v6/7aJzV14HzAOiwNTiPgucGfesZW2xOQ-xsNqO47m55DA.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+/* latin-ext */
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Dosis Regular"), local("Dosis-Regular"), url(https://fonts.gstatic.com/s/dosis/v6/RlBXAIuiO5GvH9-0-JbBlw.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+
+/* latin */
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Dosis Regular"), local("Dosis-Regular"), url(https://fonts.gstatic.com/s/dosis/v6/4hYyXH_8WmbBLamf6WjLwg.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+/*-----------------------*          MIXINS
 \*-----------------------*/
-/*-----------------------*\
-       PLACEHOLDERS
+/*-----------------------*       PLACEHOLDERS
 \*-----------------------*/
 .link, .post-container a {
   color: #1B1E25;
@@ -984,6 +994,7 @@ a {
   100% {
     opacity: 0;
     top: 29%; } }
+
 @-moz-keyframes mouse {
   0% {
     opacity: 1;
@@ -997,6 +1008,7 @@ a {
   100% {
     opacity: 0;
     top: 29%; } }
+
 @keyframes mouse {
   0% {
     opacity: 1;
@@ -1010,6 +1022,7 @@ a {
   100% {
     opacity: 0;
     top: 29%; } }
+
 .post-card {
   float: left;
   clear: none;
@@ -1050,6 +1063,7 @@ a {
       float: right; }
     .post-card:nth-of-type(1n + 1) {
       clear: both; } }
+
 /* Icon 1 */
 #hamburger {
   width: 50px;
@@ -1206,6 +1220,7 @@ a {
 @media screen and (max-width: 768px) {
   .header__title {
     font-size: 30px; } }
+
 .about-work, .about-me {
   *zoom: 1;
   padding: 100px 0px; }
@@ -1265,7 +1280,6 @@ a {
 @media screen and (max-width: 768px) {
   .about-work, .about-me {
     padding: 50px 0px; }
-
   .about__ilustrations, .about__content {
     float: left;
     clear: none;
@@ -1281,15 +1295,13 @@ a {
       float: right; }
     .about__ilustrations:nth-of-type(1n + 1), .about__content:nth-of-type(1n + 1) {
       clear: both; }
-
   .about__ilustrations {
     margin-bottom: 20px; }
-
   .about__ilustrations--me {
     float: left; }
-
   .about__content--me {
     text-align: left; } }
+
 .blog {
   padding: 100px 0;
   background: #F5F5F5; }
@@ -1360,12 +1372,11 @@ a {
     .project__ilustration--left img,
     .project__ilustration--right img {
       transform: none; }
-
   .project__content {
     width: 100%; }
-
   .project__title {
     margin-top: 20px; } }
+
 .post-page {
   background: #F5F5F5; }
 
@@ -1405,5 +1416,3 @@ a {
   .post-container {
     width: 90%;
     padding: 30px; } }
-
-/*# sourceMappingURL=main.css.map */

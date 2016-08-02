@@ -16,11 +16,16 @@
     "url": "https://github.com/jeffersondanielss/jeffersondanielss.github.io/issues"
   },
   "homepage": "https://github.com/jeffersondanielss/jeffersondanielss.github.io#readme",
-  "dependencies": {
-    "grunt": "^1.0.1",
-    "grunt-cli": "^1.2.0",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-uglify": "^1.0.1",
-    "grunt-contrib-watch": "^1.0.0"
+  "dependencies": {},
+  "devDependencies": {
+    "events-stream": "^0.2.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.9",
+    "jshint": "^2.9.2"
   }
 }
