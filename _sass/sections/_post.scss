@@ -20,13 +20,16 @@
   padding: 50px;
   box-shadow: 0 2px 2px #CCCCCC;
   font-size: 18px;
-  min-height: 70%; 
+  min-height: 70%;
 
   p {
     margin-bottom: 20px;
+    line-height: 32px;
+    font-size: 20px;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h2, h3, h4, h5, h6 {
+    margin-top: 60px;
     margin-bottom: 20px;
   }
 

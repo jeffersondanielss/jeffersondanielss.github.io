@@ -65,6 +65,12 @@
   }
 
 
+  @media screen and ( min-width: $iMac ) {
+    .project__ilustration--left, .project__ilustration--right {
+      width: 36%;
+    }
+  }
+
   @media screen and ( max-width: $ipad ) {
 
     .project__ilustration--left,
