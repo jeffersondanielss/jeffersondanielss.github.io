@@ -72,5 +72,6 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: github
-  repository: git@github.com:jeffersondanielss/jeffersondanielss.github.io.git
+  type: git
+  repository: https://github.com/jeffersondanielss/jeffersondanielss.github.io
+  branch: master
