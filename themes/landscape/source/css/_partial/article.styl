@@ -30,13 +30,12 @@
 
 .article-title
   text-decoration: none
-  font-size: 2em
+  font-size: 2.3em
   font-weight: bold
-  color: color-default
+  color: #444
   line-height: line-height-title
   transition: color 0.2s
-  a&:hover
-    color: color-link
+  margin-top 20px
 
 .article-entry
   @extend $base-style
@@ -53,6 +52,7 @@
     margin: line-height 0
   h1, h2, h3, h4, h5, h6
     font-weight: bold
+    color: #444
   h1, h2, h3, h4, h5, h6
     line-height: line-height-title
     margin: line-height-title 0
@@ -69,6 +69,8 @@
     height: auto
     display: block
     margin: auto
+  strong
+    color: #444
   iframe
     border: none
   table
