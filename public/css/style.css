@@ -672,17 +672,15 @@ body {
 }
 .article-title {
   text-decoration: none;
-  font-size: 2em;
+  font-size: 2.3em;
   font-weight: bold;
-  color: #555;
+  color: #444;
   line-height: 1.1em;
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
   -ms-transition: color 0.2s;
   transition: color 0.2s;
-}
-a.article-title:hover {
-  color: #258fb8;
+  margin-top: 20px;
 }
 .article-entry {
   color: #555;
@@ -712,6 +710,7 @@ a.article-title:hover {
 .article-entry h5,
 .article-entry h6 {
   font-weight: bold;
+  color: #444;
 }
 .article-entry h1,
 .article-entry h2,
@@ -741,6 +740,9 @@ a.article-title:hover {
   height: auto;
   display: block;
   margin: auto;
+}
+.article-entry strong {
+  color: #444;
 }
 .article-entry iframe {
   border: none;
