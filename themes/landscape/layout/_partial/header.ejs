@@ -1,0 +1,17 @@
+<header class="header">
+  <div class="header__bg"></div>
+  <div class="outer">
+
+    <h1 class="header__title">
+      <a href="<%- url_for() %>" id="logo"><%= config.title %></a>
+    </h1>
+    
+    <nav class="menu">
+      <% for (var i in theme.menu){ %>
+        <a class="menu__link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+      <% } %>
+      <a href="http://github.com/jeffersondanielss" target="_blank" class="github menu__link"></a>
+    </nav>
+
+  </div>
+</header>

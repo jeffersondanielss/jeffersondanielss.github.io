@@ -1,5 +1,8 @@
-/contrate
-.sass-cache
-.jekyll-metadata
-/node_modules
-npm-debug.log
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+source/_drafts
