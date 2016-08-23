@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Tirando maior proveito do SASS | Jefferson Daniel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Que os pré-processadores facilitam nossa vida na hora de criar as nossas interfaces já não é novidade, o uso deles já é bem comum mesmo em aplicações pequenas. Mas mesmo sabendo de suas amplas funcion">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tirando maior proveito do SASS">
+<meta property="og:url" content="http://jeffersondanielss.github.io/tirando-maior-proveito-do-sass/index.html">
+<meta property="og:site_name" content="Jefferson Daniel">
+<meta property="og:description" content="Que os pré-processadores facilitam nossa vida na hora de criar as nossas interfaces já não é novidade, o uso deles já é bem comum mesmo em aplicações pequenas. Mas mesmo sabendo de suas amplas funcion">
+<meta property="og:updated_time" content="2016-08-23T03:07:49.472Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tirando maior proveito do SASS">
+<meta name="twitter:description" content="Que os pré-processadores facilitam nossa vida na hora de criar as nossas interfaces já não é novidade, o uso deles já é bem comum mesmo em aplicações pequenas. Mas mesmo sabendo de suas amplas funcion">
+  
+    <link rel="alternate" href="/atom.xml" title="Jefferson Daniel" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-43996928-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header class="header">
+  <div class="header__bg"></div>
+  <div class="outer">
+
+    <h1 class="header__title">
+      <a href="/" id="logo">Jefferson Daniel</a>
+    </h1>
+    
+    <nav class="menu">
+      
+      <a href="http://github.com/jeffersondanielss" target="_blank" class="github menu__link"></a>
+    </nav>
+
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-tirando-maior-proveito-do-sass" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/tirando-maior-proveito-do-sass/" class="article-date">
+  <time datetime="2016-08-22T00:13:51.000Z" itemprop="datePublished">21-08-2016</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Tirando maior proveito do SASS
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Que os pré-processadores facilitam nossa vida na hora de criar as nossas interfaces já não é novidade, o uso deles já é bem comum mesmo em aplicações pequenas. Mas mesmo sabendo de suas amplas funcionalidades as vezes acabamos usando apenas as mais simples, aninhamento de seletores, <strong>$variáveis</strong>, <strong>@mixins</strong>, <strong>%placeholders</strong>.</p>
+<p>Nesse posts vou abordar outras funcionalidades muito úteis que podemos tirar mais proveito quando utilizamos SASS, como <strong>@function</strong>, <strong>@each</strong>, <strong>@if</strong>, <strong>map</strong>, <strong>map-get</strong>, <strong>darken</strong>, <strong>lighten</strong>.</p>
+<h2 id="Darken-e-Lighten"><a href="#Darken-e-Lighten" class="headerlink" title="Darken e Lighten"></a>Darken e Lighten</h2><p>Podemos começar com os mais simples, o darken e o lighten tem muito em comum, são funções que recebem dois parâmetros, o primeiro é uma cor, e o segundo um valor  que irá alterar essa cor do primeiro parâmetro.</p>
+<p>A diferença é que o lighten irá deixar essa cor mais clara enquanto o darken mais escura.</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$red</span>: <span class="number">#FF0000</span>;</div><div class="line"></div><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">color</span>: darken(<span class="variable">$red</span>, <span class="number">20%</span>);</div><div class="line">  <span class="attribute">background-color</span>: lighten(<span class="variable">$red</span>, <span class="number">20%</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Essas funções são muito úteis na hora de criar sombras, como no caso de criar botões:</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$red</span>: <span class="number">#FF0000</span>;</div><div class="line"></div><div class="line"><span class="selector-class">.btn--red</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: <span class="variable">$red</span>;</div><div class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">1px</span> <span class="number">1px</span> <span class="number">1px</span> lighten(<span class="variable">$red</span>, <span class="number">40%</span>); </div><div class="line">  <span class="attribute">border-bottom</span>: <span class="number">3px</span> solid darken(<span class="variable">$red</span>, <span class="number">10%</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><p>Antes de ir para o tópico <strong>@each</strong>, vamos a uma breve introdução aos mapas com SASS, eles são bons na criação de regras iniciais do projeto, como configurar cores, fontes e breakpoints, podemos pegar como exemplo a definição das cores do projeto.</p>
+<p>Ao invés de criar uma variável para cada cor, podemos criar uma coleção se cores, um mapa com  chave e valor correspondente a cada cor que precise ser criada armazenado em uma variável.</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$color</span>: (</div><div class="line">  red: <span class="number">#FF0000</span>,</div><div class="line">  green: <span class="number">#00FF00</span>,</div><div class="line">  blue: <span class="number">#0000FF</span></div><div class="line">);</div></pre></td></tr></table></figure>
+<p>Agora para buscar as cores basta usar a função nativa do SASS <strong>map-get()</strong> que recebe dois parâmetros, o primeiro é o mapa, que no caso é <strong>$color</strong> e o segundo parâmetro é a chave correspondente a cor que você deseja.</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.elemento</span> &#123;</div><div class="line">  <span class="attribute">color</span>: map-get(<span class="variable">$color</span>, red);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Resultado:</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.elemento</span> &#123;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#FF0000</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Each"><a href="#Each" class="headerlink" title="Each"></a>Each</h2><p>O <strong>@each</strong> é excelente em economizar tempo automatizando tarefas repetidas, é muito útil para criar muitas classes com as mesmas propriedades mas com valores diferentes.</p>
+<p>Na criação dos principais componentes da sua aplicação como os botões e suas variações é um ótimo caso para se usar um each, aqui também vemos um dos benefícios de usar os mapas, usando o mesmo mapa do exemplo anterior vamos a criação dessas variações de botões.</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$color</span>: (</div><div class="line">  red: <span class="number">#FF0000</span>,</div><div class="line">  green: <span class="number">#00FF00</span>,</div><div class="line">  blue: <span class="number">#0000FF</span></div><div class="line">);</div><div class="line"></div><div class="line">@<span class="keyword">each</span> <span class="variable">$btnType</span>, <span class="variable">$btnColor</span> in <span class="variable">$color</span> &#123;</div><div class="line">  <span class="selector-class">.btn--</span>#&#123;<span class="variable">$btnType</span>&#125; &#123;</div><div class="line">    <span class="attribute">background-color</span>: <span class="variable">$btnColor</span>;</div><div class="line">    <span class="attribute">box-shadow</span>: inset <span class="number">0</span> -<span class="number">1px</span> <span class="number">1px</span> <span class="number">0px</span> lighten(<span class="variable">$btnColor</span>, <span class="number">20%</span>); </div><div class="line">    <span class="attribute">border-bottom</span>: <span class="number">3px</span> solid darken(<span class="variable">$btnColor</span>, <span class="number">10%</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Para o uso de variáveis em seletores e propriedades é preciso fazer a interpolação das mesmas, para isso é usada a sintax <strong>#{$variavel}</strong> como se pode perceber na linha <strong>8</strong> do exemplo acima.</p>
+<p>Esse <strong>@each</strong> vai percorrer o mapa <strong>$color</strong> resgatar chave e valor e criar um botão para cara item. Isso vai resultar em três classes.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.btn--red</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#FF0000</span>;</div><div class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> -<span class="number">1px</span> <span class="number">1px</span> <span class="number">0px</span> <span class="number">#ff6666</span>;</div><div class="line">  <span class="attribute">border-bottom</span>: <span class="number">3px</span> solid <span class="number">#cc0000</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.btn--green</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#00FF00</span>;</div><div class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> -<span class="number">1px</span> <span class="number">1px</span> <span class="number">0px</span> <span class="number">#66ff66</span>;</div><div class="line">  <span class="attribute">border-bottom</span>: <span class="number">3px</span> solid <span class="number">#00cc00</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.btn--blue</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#0000FF</span>;</div><div class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> -<span class="number">1px</span> <span class="number">1px</span> <span class="number">0px</span> <span class="number">#6666ff</span>;</div><div class="line">  <span class="attribute">border-bottom</span>: <span class="number">3px</span> solid <span class="number">#0000cc</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="If"><a href="#If" class="headerlink" title="If"></a>If</h2><p>O <strong>@if</strong> é muito útil na hora de criar functions, eachs, e mixins que em alguns casos precisa demonstrar um comportamento diferente, ao invés que criar um outro mixin você pode apenas inserir uma condição dentro desse bloco para que esse comportamento seja adicionado ou não.</p>
+<p>Usando o exemplo do <strong>@each</strong> acima, digamos que apenas um dos botões precise receber um comportamento diferente, ainda assim podemos seguir com o mesmo código, basta adicionar um <strong>@if</strong> para identificar esse botão.</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$color</span>: (</div><div class="line">  red: <span class="number">#FF0000</span>,</div><div class="line">  green: <span class="number">#00FF00</span>,</div><div class="line">  blue: <span class="number">#0000FF</span></div><div class="line">);</div><div class="line"></div><div class="line">@<span class="keyword">each</span> <span class="variable">$name</span>, <span class="variable">$btnColor</span> in <span class="variable">$color</span> &#123;</div><div class="line">  <span class="selector-class">.btn--</span>#&#123;<span class="variable">$name</span>&#125; &#123;</div><div class="line">    <span class="attribute">background-color</span>: <span class="variable">$btnColor</span>;</div><div class="line">    <span class="attribute">box-shadow</span>: inset <span class="number">0</span> -<span class="number">1px</span> <span class="number">1px</span> <span class="number">0px</span> lighten(<span class="variable">$btnColor</span>, <span class="number">20%</span>); </div><div class="line">    <span class="attribute">border-bottom</span>: <span class="number">3px</span> solid darken(<span class="variable">$btnColor</span>, <span class="number">10%</span>);</div><div class="line">    </div><div class="line">    @<span class="keyword">if</span> <span class="variable">$name</span> == red &#123;</div><div class="line">      <span class="attribute">color</span>: <span class="number">#FFFFFF</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Na linha <strong>11</strong> é adicionado essa condição que compara a chave do mapa, se <strong>$name</strong> que são as chaves do mapa <strong>$color</strong> for igual a <strong>red</strong> então a linha <strong>14</strong> é adicionada. Resultado:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.btn--red</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#FF0000</span>;</div><div class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> -<span class="number">1px</span> <span class="number">1px</span> <span class="number">0px</span> <span class="number">#ff6666</span>;</div><div class="line">  <span class="attribute">border-bottom</span>: <span class="number">3px</span> solid <span class="number">#cc0000</span>;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#FFFFFF</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.btn--green</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#00FF00</span>;</div><div class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> -<span class="number">1px</span> <span class="number">1px</span> <span class="number">0px</span> <span class="number">#66ff66</span>;</div><div class="line">  <span class="attribute">border-bottom</span>: <span class="number">3px</span> solid <span class="number">#00cc00</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.btn--blue</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#0000FF</span>;</div><div class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> -<span class="number">1px</span> <span class="number">1px</span> <span class="number">0px</span> <span class="number">#6666ff</span>;</div><div class="line">  <span class="attribute">border-bottom</span>: <span class="number">3px</span> solid <span class="number">#0000cc</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h2><p>A diretiva <strong>@function</strong> no SASS é útil pra que cada vez menos a gente precisa repetir códigos, no CSS há muitas operações que precisamos que podem ser transformadas em funções, como transformar medidas de fontes fixas em relativas.</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@function rem(<span class="variable">$px</span>) &#123;</div><div class="line">  @return (<span class="variable">$px</span>/<span class="number">16</span>) + rem;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.btn</span> &#123;</div><div class="line">  <span class="attribute">font-size</span>: rem(<span class="number">32</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Há muito para se aproveitar dessa e de muitas outras funções que o SASS tem, podemos usar essas funções em coisas extremamente simples mas que podem economizar muito tempo, e tempo é dinheiro não é verdade?!</p>
+<p>Tudo depende de como e quando você vai usar cada feature que o SASS pode te oferecer, quando a expectativa do projeto é crescer constantemente é ótimo ter algo desse tipo, vai facilitar muito na hora de implementar mudanças ou novas variações nos componentes que já existem.</p>
+<p>No site do SASS tem muitas outras coisas interessantes que valem a pena ser consideradas, caso tenha interesse você pode acessar o <a href="http://sass-lang.com/guide" target="_blank" rel="external">Guide</a> ou a <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html" target="_blank" rel="external">Documentação</a>.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jeffersondanielss.github.io/tirando-maior-proveito-do-sass/" data-id="cis6wf2ku00064kr36h5242go" class="article-share-link">Compartilhar</a>
+      
+        <a href="http://jeffersondanielss.github.io/tirando-maior-proveito-do-sass/#disqus_thread" class="article-comment-link">Comentários</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SASS/">SASS</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/immediately-invoked-function-expression/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Post Anterior</strong>
+      <div class="article-nav-title">Immediately invoked function expression</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Jefferson Daniel
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jeffersondaniel';
+  
+  var disqus_url = 'http://jeffersondanielss.github.io/tirando-maior-proveito-do-sass/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
