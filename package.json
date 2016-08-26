@@ -8,7 +8,7 @@
     "start": "npm install && hexo serve --debug",
     "serve": "hexo serve --debug",
     "serve-draft": "hexo serve --draft --debug",
-    "build": "hexo generate",
+    "build": "hexo clean && hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy"
   },
