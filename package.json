@@ -34,5 +34,9 @@
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-server": "^0.2.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp-concat": "^2.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.9"
+  }
 }
