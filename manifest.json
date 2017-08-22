@@ -1,0 +1,16 @@
+{
+  "name": "jeffersondaniel.com",
+  "short_name": "jeffersondaniel",
+  "start_url": "index.html",
+  "theme_color": "#1A1B1D",
+  "background_color": "#1A1B1D",
+  "orientation": "portrait",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}
