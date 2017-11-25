@@ -25,6 +25,22 @@
 
     ga('create', 'UA-43996928-1', 'auto');
     ga('send', 'pageview');
+
+    function fadeInSelector( selector ) {
+      document.querySelector('.' + selector ).classList.add(selector + '-active')
+    }
+
+    function activeAllItens() {
+      fadeInSelector('container')
+
+      setTimeout(function(){
+        fadeInSelector('menu')
+        fadeInSelector('footer-link')
+        fadeInSelector('title')
+      }, 1000)
+    }
+
+    window.onload = activeAllItens
   </script>
 
   <style>
@@ -47,28 +63,50 @@
     .container {
       margin: 2.5% auto;
       box-shadow: 0 5px 15px #000;
-      width: 90%;
-      height: 90%;
+      width: 93%;
+      height: 93%;
       position: relative;
       font-family: "Encode Sans";
+      opacity: 0;
     }
 
     .container::before {
       content: '';
       position: absolute;
       top: 0;
+      left: 50%;
       height: 1px;
       display: block;
-      width: 100%;
+      width: 0%;
       background: -moz-linear-gradient(left, #34c29c 0%, #5bafce 34%, #d5647b 65%, #e4903d 100%);
       background: -webkit-gradient(left top, right top, color-stop(0%, #34c29c), color-stop(34%, #5bafce), color-stop(65%, #d5647b), color-stop(100%, #e4903d));
       background: linear-gradient(to right, #34c29c 0%, #5bafce 34%, #d5647b 65%, #e4903d 100%);
     }
 
+    .container-active {
+      width: 90%;
+      height: 90%;
+      transition: 1s ease-in-out;
+      opacity: 1;
+    }
+
+    .container-active::before {
+      left: 0%;
+      width: 100%;
+      transition: 3s ease-in-out;
+    }
+
     .menu {
       position: absolute;
       right: 20px;
+      top: 25px;
+      opacity: 0;
+    }
+
+    .menu-active {
+      opacity: 1;
       top: 20px;
+      transition: 1s ease-in-out;
     }
 
     .link {
@@ -87,7 +125,7 @@
       left: 50%;
       top: 45%;
       letter-spacing: 2px;
-      margin: 0px
+      margin: 0px;
     }
 
     .footer {
@@ -102,6 +140,16 @@
       display: block;
       text-decoration: none;
       font-size: 16px;
+      position: relative;
+      margin-bottom: -10px;
+      opacity: 0;
+    }
+
+    .footer-link-active {
+      transition: 1s ease-in-out;
+      opacity: 1;
+      position: relative;
+      margin-bottom: 0px;
     }
 
     @media screen and ( max-width: 440px ) {
