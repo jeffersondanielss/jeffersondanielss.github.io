@@ -26,17 +26,19 @@
     ga('create', 'UA-43996928-1', 'auto');
     ga('send', 'pageview');
 
-    function fadeInSelector( selector ) {
-      document.querySelector('.' + selector ).classList.add(selector + '-active')
+    var elements = ['menu', 'footer-link', 'title']
+
+    function fadeInElements( selectors ) {
+      selectors.map(function( current ){
+        document.querySelector('.' + current ).classList.add(current + '-active')
+      })
     }
 
     function activeAllItens() {
-      fadeInSelector('container')
+      fadeInElements(['container'])
 
       setTimeout(function(){
-        fadeInSelector('menu')
-        fadeInSelector('footer-link')
-        fadeInSelector('title')
+        fadeInElements(elements)
       }, 1000)
     }
 
